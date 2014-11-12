@@ -1,0 +1,45 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.group {
+  margin: 0 auto;
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+  padding: 5px;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+* html .row {
+  zoom: 1;
+}
+
+/* IE6 */
+*:first-child + html .row {
+  zoom: 1;
+}
+
+/* IE7 */
+.unit {
+  float: left;
+  width: 100%;
+  word-break: break-word;
+  padding: 5px;
+}
+
+.content {
+  padding: 5px;
+}
